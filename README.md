@@ -26,6 +26,9 @@ SSH秘钥代理
 
 四、全局配置
 1、配置JDK路径、maven_home
+2、配置SSH密钥连接及服务器
 
-3、配置SSH密钥连接及服务器
+五、问题记录
+1、jenkins执行完构建命令会杀死当前构建进程以及其衍生进程，所以启动jar完成时会被jenkins杀死。解决办法：在exe shell command头部加上BUILD_ID=DONTKILLME
+2、执行linux 自定义shell时找不到shell中定义的自定义命令，例如在linux上自定义命令，命令"abc" > cd /abc,jenkins报abc命令找不到。解决办法：在自定义shell头部使用#!/bin/bash -iel注解
 
